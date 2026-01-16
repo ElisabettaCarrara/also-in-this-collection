@@ -1,4 +1,4 @@
-=== Also In This Collection ===
+=== Also In This Collection for ClassicPress ===
 Contributors: Elisabetta Carrara  
 Donate link: https://donate.stripe.com/cN228ZaeFajw54QfYY  
 Tags: related posts, collection, posts, SEO, internal links, widget  
