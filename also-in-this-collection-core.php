@@ -299,4 +299,4 @@ function findCurrentPostRank($collectionposts, $currentpostid, $order) {
 
 // Register hooks
 add_action('pre_get_posts', __NAMESPACE__ . '\pre_get_posts');
-add_action('the_content', __NAMESPACE__ . '\the_content', 1);
+add_filter('the_content', __NAMESPACE__ . '\the_content', 1);
