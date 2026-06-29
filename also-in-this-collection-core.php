@@ -288,7 +288,7 @@ function findCurrentPostRank($collectionposts, $currentpostid, $order) {
         }
     }
 
-    if (strtolower($order) === 'desc') {
+    if ( 'desc' === strtolower( $order ?? '' ) ) {
     return count($collectionposts) - 1 - $currentpostrank;
 } else {
     return $currentpostrank;
