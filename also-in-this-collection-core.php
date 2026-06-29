@@ -197,17 +197,17 @@ $query = [
     }
 }
 
-/**
- * Set the order for collection taxonomy archives.
- */
-function pre_get_posts($query) {
-    $sortorder = config('archive-sort-order');
+function pre_get_posts( $query ) {
 
-    if (isset($query->query[COLLECTION_TAXONOMY]) && $sortorder) {
-        $query->set('order', $sortorder);
+    if ( is_admin() || ! $query->is_main_query() ) {
+        return;
     }
 
-    return $query;
+    $sortorder = config( 'archive-sort-order' );
+
+    if ( $query->is_tax( COLLECTION_TAXONOMY ) && $sortorder ) {
+        $query->set( 'order', $sortorder );
+    }
 }
 
 /**
