@@ -25,7 +25,11 @@ function init_taxonomies() {
         'rewrite' => [ 'with_front' => false ]
     ];
 
-    register_taxonomy( COLLECTION_TAXONOMY, null, $taxonomy );
+    register_taxonomy(
+    COLLECTION_TAXONOMY,
+    [],
+    $taxonomy
+);
     register_taxonomy_for_object_type( COLLECTION_TAXONOMY, 'post' );
 }
 
