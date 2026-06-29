@@ -13,18 +13,18 @@ class CollectionWidget extends WP_Widget {
         );
     }
 
-    public function widget( $widget, $fields ) {
-        $ffields = apply_filters( 'alsointhiscollection_widget_fields', $fields, $widget );
+    public function widget( $args, $instance ) {
+        $fields = apply_filters( 'alsointhiscollection_widget_fields', $fields, $widget );
 
         $config = [
             'collection-slug' => $fields['collection-slug'] ?? '',
-            'use-frame' => $ffields['collection-use-frame'],
-            'frame-width' => $ffields['collection-frame-width'],
-            'sort-order' => $ffields['collection-sort-order'],
-            'title-wrap' => $ffields['collection-title-wrap'],
-            'title-template' => $ffields['collection-title-template'],
-            'hide-collection-listing' => $ffields['collection-hide-listing'],
-            'always-link-collection' => $ffields['collection-always-link'],
+            'use-frame' => $fields['collection-use-frame'],
+            'frame-width' => $fields['collection-frame-width'],
+            'sort-order' => $fields['collection-sort-order'],
+            'title-wrap' => $fields['collection-title-wrap'],
+            'title-template' => $fields['collection-title-template'],
+            'hide-collection-listing' => $fields['collection-hide-listing'],
+            'always-link-collection' => $fields['collection-always-link'],
         ];
 
         ob_start();
