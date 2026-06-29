@@ -21,7 +21,9 @@ function config($key = null) {
 
     $config = array_merge($defaults, get_option(COLLECTION_SLUG, []));
 
-    return $key !== null ? $config[$key] : $config;
+    return $key !== null
+    ? ($config[$key] ?? null)
+    : $config;
 }
 
 /**
