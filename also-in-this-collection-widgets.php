@@ -17,7 +17,7 @@ class CollectionWidget extends WP_Widget {
         $ffields = apply_filters( 'alsointhiscollection_widget_fields', $fields, $widget );
 
         $config = [
-            'collection-slug' => $ffields['collection-slug'],
+            'collection-slug' => $fields['collection-slug'] ?? '',
             'use-frame' => $ffields['collection-use-frame'],
             'frame-width' => $ffields['collection-frame-width'],
             'sort-order' => $ffields['collection-sort-order'],
@@ -36,7 +36,7 @@ class CollectionWidget extends WP_Widget {
     }
 
     public function form( $fields ) {
-        $collectionslug = $fields['collection-slug'];
+        $collectionslug = $fields['collection-slug'] ?? '';
         $useframe = $fields['collection-use-frame'];
         $framewidth = $fields['collection-frame-width'];
         $sortorder = $fields['collection-sort-order'];
