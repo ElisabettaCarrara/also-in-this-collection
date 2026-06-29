@@ -1,4 +1,4 @@
-<<?php foreach ( $values as $index => $value ) : ?>
+<?php foreach ( $values as $index => $value ) : ?>
     <input 
         type="checkbox" 
         id="<?php echo esc_attr( "{$id}_{$index}" ); ?>" 
